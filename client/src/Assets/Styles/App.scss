@@ -34,19 +34,18 @@ $pale-blue: hsl(236, 100%, 87%);
 
 .main-card-header {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   background-color: $blue;
   border-radius: 15px;
   padding: 1.5em;
   z-index: 5;
   position: relative;
-  // padding: 2em 1em;
+
   img {
     border-radius: 50%;
     border: solid 3px white;
     max-width: 4em;
-    margin-right: 1em;
   }
 }
 
