@@ -1,7 +1,8 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import logo from "./logo.svg";
-import "./App.scss";
+
+import user from "./Assets/Images/image-jeremy.png";
+import "./Assets/Styles/App.scss";
 
 function App() {
   interface IDataElement {
@@ -44,21 +45,23 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-      <div>
+      <div className="cards">
+        <div className="main-card">
+          <div className="main-card-header">
+            <img src={user} alt="user" />
+            <div className="card-desc">
+              <p className="report-for">Report for</p>
+              <p className="user-name">Jeremy Robson</p>
+            </div>
+          </div>
+          <div className="btn-selectors">
+            <p>Daily</p>
+            <p>Weekly</p>
+            <p>Monthly</p>
+          </div>
+        </div>
+      </div>
+      {/* <div>
         <b>From API</b> {api}
       </div>
       <div>
@@ -66,7 +69,7 @@ function App() {
         <>
           {Array.isArray(data) ? data[0].timeframes.daily.current : "No data"}
         </>
-      </div>
+      </div> */}
     </div>
   );
 }
