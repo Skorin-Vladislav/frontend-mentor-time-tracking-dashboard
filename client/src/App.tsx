@@ -25,6 +25,27 @@ function App() {
 
   let [api, setApi] = useState();
   let [data, setData] = useState<IDataElement[] | null>(null);
+  let [daily, setDaily] = useState(true);
+  let [weekly, setWeekly] = useState(false);
+  let [monthly, setMonthly] = useState(false);
+
+  function handleDaily(): void {
+    setWeekly(false);
+    setMonthly(false);
+    setDaily(true);
+  }
+
+  function handleWeekly(): void {
+    setMonthly(false);
+    setDaily(false);
+    setWeekly(true);
+  }
+
+  function handleMonthly(): void {
+    setWeekly(false);
+    setDaily(false);
+    setMonthly(true);
+  }
 
   useEffect(() => {
     fetch("/api")
@@ -41,7 +62,7 @@ function App() {
         setData(data);
         console.log("data: ", data);
       });
-  }, []);
+  }, [daily, weekly, monthly]);
 
   return (
     <div className="App">
@@ -55,9 +76,21 @@ function App() {
             </div>
           </div>
           <div className="btn-selectors">
-            <p>Daily</p>
-            <p>Weekly</p>
-            <p>Monthly</p>
+            <p className={`${daily ? "btn-active" : ""}`} onClick={handleDaily}>
+              Daily
+            </p>
+            <p
+              className={`${weekly ? "btn-active" : ""}`}
+              onClick={handleWeekly}
+            >
+              Weekly
+            </p>
+            <p
+              className={`${monthly ? "btn-active" : ""}`}
+              onClick={handleMonthly}
+            >
+              Monthly
+            </p>
           </div>
         </div>
       </div>
