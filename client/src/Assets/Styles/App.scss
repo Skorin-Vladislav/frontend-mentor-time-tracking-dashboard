@@ -24,7 +24,7 @@ $pale-blue: hsl(236, 100%, 87%);
   display: grid;
 
   grid-template-columns: 1fr;
-
+  min-height: 100vh;
   padding: 3em 1.5em;
 }
 

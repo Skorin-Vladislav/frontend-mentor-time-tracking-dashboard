@@ -1,6 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
-
+import Card from "./Components/Card/Card";
 import user from "./Assets/Images/image-jeremy.png";
 import "./Assets/Styles/App.scss";
 
@@ -24,7 +24,25 @@ function App() {
   }
 
   let [api, setApi] = useState();
-  let [data, setData] = useState<IDataElement[] | null>(null);
+  let [data, setData] = useState<IDataElement[]>([
+    {
+      title: "title-default",
+      timeframes: {
+        daily: {
+          current: 12,
+          previous: 13,
+        },
+        weekly: {
+          current: 14,
+          previous: 15,
+        },
+        monthly: {
+          current: 16,
+          previous: 17,
+        },
+      },
+    },
+  ]);
   let [daily, setDaily] = useState(true);
   let [weekly, setWeekly] = useState(false);
   let [monthly, setMonthly] = useState(false);
@@ -93,6 +111,11 @@ function App() {
             </p>
           </div>
         </div>
+
+        <Card
+          props={data[0]}
+          selection={daily ? "daily" : monthly ? "monthly" : "weekly"}
+        />
       </div>
       {/* <div>
         <b>From API</b> {api}
