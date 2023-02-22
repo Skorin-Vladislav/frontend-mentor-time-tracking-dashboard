@@ -112,20 +112,13 @@ function App() {
           </div>
         </div>
 
-        <Card
-          props={data[0]}
-          selection={daily ? "daily" : monthly ? "monthly" : "weekly"}
-        />
+        {data.map((value) => (
+          <Card
+            props={value}
+            selection={daily ? "daily" : monthly ? "monthly" : "weekly"}
+          />
+        ))}
       </div>
-      {/* <div>
-        <b>From API</b> {api}
-      </div>
-      <div>
-        <b>From DATA</b>{" "}
-        <>
-          {Array.isArray(data) ? data[0].timeframes.daily.current : "No data"}
-        </>
-      </div> */}
     </div>
   );
 }

@@ -1,6 +1,13 @@
-$light-red: hsl(15, 100%, 70%); //(work)
+$light-red-work: hsl(15, 100%, 70%); //(work)
 $dark-blue: hsl(235, 46%, 20%);
 $desaturated-blue: hsl(235, 45%, 61%);
+$pale-blue: hsl(236, 100%, 87%);
+
+$soft-blue: hsl(195, 74%, 62%); //(play)
+$light-red: hsl(348, 100%, 68%); //(study)
+$lime-green: hsl(145, 58%, 55%); //(exercise)
+$violet: hsl(264, 64%, 52%); // (social)
+$soft-orange: hsl(43, 84%, 65%); //(self care)
 
 * {
   margin: 0;
@@ -13,7 +20,6 @@ $desaturated-blue: hsl(235, 45%, 61%);
 }
 
 .time-card-header {
-  background-color: $light-red;
   display: flex;
   justify-content: flex-end;
   border-radius: 15px;
@@ -21,6 +27,10 @@ $desaturated-blue: hsl(235, 45%, 61%);
   z-index: 4;
   img {
     transform: translateY(-0.2em);
+    padding-right: 1em;
+    max-height: 78px;
+    min-height: 78px;
+    max-width: 94px;
   }
 }
 
@@ -76,4 +86,47 @@ $desaturated-blue: hsl(235, 45%, 61%);
       }
     }
   }
+}
+img[alt="Work"] {
+  content: url(../Images/icon-work.svg);
+}
+
+img[alt="Play"] {
+  content: url(../Images/icon-play.svg);
+}
+
+img[alt="Study"] {
+  content: url(../Images/icon-study.svg);
+}
+
+img[alt="Exercise"] {
+  content: url(../Images/icon-exercise.svg);
+}
+
+img[alt="Social"] {
+  content: url(../Images/icon-social.svg);
+}
+
+img[alt="Self Care"] {
+  content: url(../Images/icon-self-care.svg);
+}
+
+#Work {
+  background-color: $light-red-work;
+}
+
+#Play {
+  background-color: $soft-blue;
+}
+#Study {
+  background-color: $light-red;
+}
+#Exercise {
+  background-color: $lime-green;
+}
+#Social {
+  background-color: $violet;
+}
+#SelfCare {
+  background-color: $soft-orange;
 }
