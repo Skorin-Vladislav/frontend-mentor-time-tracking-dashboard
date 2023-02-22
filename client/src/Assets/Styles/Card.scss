@@ -43,6 +43,11 @@ $soft-orange: hsl(43, 84%, 65%); //(self care)
   min-width: 100%; // template (delete)
 
   transform: translateY(-2.2em);
+
+  &:hover {
+    background-color: hsl(235.9, 38.1%, 38%);
+    cursor: pointer;
+  }
 }
 
 .info-wrapper {
