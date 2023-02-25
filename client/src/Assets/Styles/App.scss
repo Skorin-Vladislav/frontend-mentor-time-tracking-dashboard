@@ -87,3 +87,53 @@ $pale-blue: hsl(236, 100%, 87%);
 .btn-active {
   color: white !important;
 }
+
+@media only screen and (min-width: 800px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1.2em;
+  }
+
+  .main-card {
+    grid-row-start: 1;
+    grid-row-end: 3;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+
+    .main-card-header {
+      min-height: 65%;
+      flex-direction: column;
+      justify-content: space-between;
+      padding-bottom: 40%;
+
+      .user-name {
+        font-size: 2em;
+        font-weight: 300;
+      }
+
+      img {
+        align-self: flex-start;
+      }
+    }
+
+    .btn-selectors {
+      flex-direction: column;
+      min-height: 35%;
+      padding-left: 1.5em;
+    }
+  }
+
+  .time-card {
+    position: relative;
+    height: 100%;
+  }
+
+  .time-card-info {
+    height: 80%;
+  }
+  .info-wrapper {
+    min-height: 100%;
+  }
+}
