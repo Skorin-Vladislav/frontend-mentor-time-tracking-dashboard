@@ -10,7 +10,7 @@ function Card(props: any) {
   return (
     <div>
       {props.props.title === "default-title" ? (
-        "Loading ..."
+        <p>Loading</p>
       ) : (
         <div className="time-card">
           <div
