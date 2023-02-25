@@ -90,7 +90,7 @@ $pale-blue: hsl(236, 100%, 87%);
 
 @media only screen and (min-width: 800px) {
   .cards {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 1fr 1fr;
     gap: 1.2em;
   }
@@ -103,7 +103,7 @@ $pale-blue: hsl(236, 100%, 87%);
     flex-direction: column;
 
     .main-card-header {
-      min-height: 65%;
+      min-height: 69.1%;
       flex-direction: column;
       justify-content: space-between;
       padding-bottom: 40%;
@@ -120,7 +120,7 @@ $pale-blue: hsl(236, 100%, 87%);
 
     .btn-selectors {
       flex-direction: column;
-      min-height: 35%;
+      padding-top: 2.7em;
       padding-left: 1.5em;
     }
   }
@@ -131,7 +131,7 @@ $pale-blue: hsl(236, 100%, 87%);
   }
 
   .time-card-info {
-    height: 80%;
+    height: 85%;
   }
   .info-wrapper {
     min-height: 100%;
@@ -144,7 +144,7 @@ $pale-blue: hsl(236, 100%, 87%);
     justify-content: space-between;
 
     .time-spent {
-      font-size: clamp(2.5em, 3em, 3.5em);
+      font-size: clamp(2.5em, 2.8em, 3.5em);
       padding-bottom: 0.5em;
       padding-left: 0.3em;
     }
