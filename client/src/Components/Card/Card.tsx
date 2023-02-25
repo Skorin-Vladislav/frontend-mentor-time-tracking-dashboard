@@ -23,12 +23,12 @@ function Card(props: any) {
             <div className="info-wrapper">
               <div>
                 <div className="title">{props.props.title}</div>
+                <img src={icon_ellipsis} alt=""></img>
+              </div>
+              <div>
                 <div className="time-spent">
                   {`${props.props.timeframes[props.selection].current}Hrs`}
                 </div>
-              </div>
-              <div>
-                <img src={icon_ellipsis} alt=""></img>
                 <div className="prev-span-results">{`${
                   props.selection === "daily"
                     ? "Yesterday"
