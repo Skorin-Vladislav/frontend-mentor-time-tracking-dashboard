@@ -70,6 +70,7 @@ $pale-blue: hsl(236, 100%, 87%);
   padding-top: 2em;
 
   transform: translateY(-2em);
+  margin-bottom: -2em;
   z-index: 1;
 
   p {
@@ -103,7 +104,7 @@ $pale-blue: hsl(236, 100%, 87%);
     flex-direction: column;
 
     .main-card-header {
-      min-height: 69.1%;
+      min-height: 60%;
       flex-direction: column;
       justify-content: space-between;
       padding-bottom: 40%;
@@ -120,7 +121,8 @@ $pale-blue: hsl(236, 100%, 87%);
 
     .btn-selectors {
       flex-direction: column;
-      padding-top: 2.7em;
+      padding-top: 20%;
+      flex: 1;
       padding-left: 1.5em;
     }
   }
