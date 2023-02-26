@@ -23,7 +23,7 @@ function App() {
     };
   }
 
-  let [api, setApi] = useState();
+ 
   let [data, setData] = useState<IDataElement[]>([
     {
       title: "title-default",
@@ -64,12 +64,6 @@ function App() {
     setDaily(false);
     setMonthly(true);
   }
-
-  useEffect(() => {
-    fetch("/api")
-      .then((res) => res.json())
-      .then((data) => setApi(data.message));
-  }, []);
 
   useEffect(() => {
     fetch("/data")
